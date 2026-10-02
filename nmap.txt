@@ -1,0 +1,85 @@
+┌──(kali㉿kali)-[~]
+└─$ nmap -sS -A medirozahospital.com
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-09-29 03:36 -0400
+Nmap scan report for medirozahospital.com (199.188.201.16)
+Host is up (0.050s latency).
+rDNS record for 199.188.201.16: server274-1.web-hosting.com
+Not shown: 988 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+21/tcp  open  ftp            Pure-FTPd
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-06-03T00:00:00
+|_Not valid after:  2026-12-18T23:59:59
+25/tcp  open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp  open  smtp           Exim smtpd 4.100.1
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Not valid before: 2026-08-14T20:59:46
+|_Not valid after:  2027-02-28T21:05:45
+| smtp-commands: server274.web-hosting.com Hello medirozahospital.com [41.173.195.69], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|_ssl-date: TLS randomness does not represent time
+53/tcp  open  domain         Mikrotik dnsd
+80/tcp  open  http-proxy     HAProxy http proxy 2.0.0 or later
+|_http-server-header: LiteSpeed
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Did not follow redirect to https://medirozahospital.com/
+110/tcp open  pop3           Dovecot pop3d
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Not valid before: 2026-08-14T20:59:46
+|_Not valid after:  2027-02-28T21:05:45
+|_pop3-capabilities: RESP-CODES CAPA STLS PIPELINING TOP USER AUTH-RESP-CODE UIDL SASL(PLAIN LOGIN)
+|_ssl-date: TLS randomness does not represent time
+143/tcp open  imap           Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: AUTH=LOGINA0001 ID capabilities AUTH=PLAIN have LITERAL+ OK STARTTLS SASL-IR more IMAP4rev1 post-login LOGIN-REFERRALS ENABLE Pre-login listed IDLE
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Not valid before: 2026-08-14T20:59:46
+|_Not valid after:  2027-02-28T21:05:45
+443/tcp open  ssl/http-proxy HAProxy http proxy 2.0.0 or later
+| tls-alpn: 
+|   h2
+|_  http/1.1
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-06-03T00:00:00
+|_Not valid after:  2026-12-18T23:59:59
+|_ssl-date: TLS randomness does not represent time
+465/tcp open  ssl/smtp       Exim smtpd 4.100.1
+|_ssl-date: TLS randomness does not represent time
+| smtp-commands: server274.web-hosting.com Hello medirozahospital.com [41.173.195.69], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+587/tcp open  smtp           Exim smtpd 4.100.1
+| ssl-cert: Subject: commonName=medirozahospital.com
+| Subject Alternative Name: DNS:medirozahospital.com, DNS:www.medirozahospital.com
+| Not valid before: 2026-08-14T20:59:46
+|_Not valid after:  2027-02-28T21:05:45
+|_ssl-date: TLS randomness does not represent time
+| smtp-commands: server274.web-hosting.com Hello medirozahospital.com [41.173.195.69], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+993/tcp open  ssl/imap       Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+995/tcp open  ssl/pop3       Dovecot pop3d
+|_ssl-date: TLS randomness does not represent time
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|bridge|general purpose
+Running (JUST GUESSING): AT&T embedded (93%), Oracle Virtualbox (92%), Slirp (92%), QEMU (90%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: AT&T BGW210 voice gateway (93%), Oracle Virtualbox Slirp NAT bridge (92%), QEMU user mode network gateway (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: Host: server274.web-hosting.com; Device: load balancer
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.67 ms server274-1.web-hosting.com (199.188.201.16)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 343.59 seconds
+                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ 

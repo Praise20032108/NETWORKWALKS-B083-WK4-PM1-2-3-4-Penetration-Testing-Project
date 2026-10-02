@@ -1,0 +1,23 @@
+┌──(kali㉿kali)-[~]
+└─$ wafw00f medirozahospital.com
+
+                   ______
+                  /      \
+                 (  Woof! )
+                  \  ____/                      )
+                  ,,                           ) (_
+             .-. -    _______                 ( |__|
+            ()``; |==|_______)                .)|__|
+            / ('        /|\                  (  |__|
+        (  /  )        / | \                  . |__|
+         \(_)_))      /  |  \                   |__|
+
+                    ~ WAFW00F : v2.4.2 ~
+    The Web Application Firewall Fingerprinting Toolkit
+    
+[*] Checking https://medirozahospital.com
+[+] The site https://medirozahospital.com is behind LiteSpeed (LiteSpeed Technologies) WAF.
+[~] Number of requests: 2
+                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ 

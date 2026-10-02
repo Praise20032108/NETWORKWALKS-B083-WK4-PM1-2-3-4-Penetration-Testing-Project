@@ -1,0 +1,13 @@
+──(kali㉿kali)-[~]
+└─$ dnsrecon -d medirozahospital.com
+2026-09-28T08:03:17.369969-0400 INFO Starting enumeration for domain: medirozahospital.com
+2026-09-28T08:03:17.371335-0400 INFO std: Performing General Enumeration against: medirozahospital.com...
+2026-09-28T08:03:17.784764-0400 ERROR No answer for DNSSEC query for medirozahospital.com
+2026-09-28T08:03:21.084407-0400 INFO     SOA dns1.namecheaphosting.com 156.154.132.200
+2026-09-28T08:03:49.021882-0400 INFO Enumerating SRV Records
+2026-09-28T08:04:26.288077-0400 ERROR No SRV Records Found for medirozahospital.com
+2026-09-28T08:04:26.288503-0400 INFO Completed enumeration for domain: medirozahospital.com
+
+                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ 
